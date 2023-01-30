@@ -43,3 +43,18 @@ function semretorno(...args: string[]): void {
 }
 
 semretorno('Gabriel', 'Algo');
+
+// tipo objeto
+const objetoA: {
+  readonly chaveA: string; //readonly: apenas para leitura, não pode alterar
+  chaveB: string;
+  chaveC?: string;
+  [key: string]: unknown; //index signature para criar mais chaves no obj
+} = {
+  chaveA: 'valor A',
+  chaveB: 'valorB',
+};
+
+objetoA.chaveA = "chave alterada!";
+objetoA.chaveC = "chave";
+objetoA.chaveD = 'Nova chave!';
