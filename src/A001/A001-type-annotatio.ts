@@ -27,3 +27,12 @@ function soma(x: number, y: number) {
 }
 const soma2: (x: number, y: number) => number = (x, y) => x + y;
 console.log(soma2(10, 15));
+
+// tipo any
+function showmsg(msg: any) {
+  return msg;
+}
+
+console.log(showmsg([1, 2, 3]));
+console.log(showmsg('Olá'));
+console.log(showmsg(1));
