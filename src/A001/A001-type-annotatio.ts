@@ -73,3 +73,14 @@ const concatenacao = concatenaString('A', 'B', 'C');
 console.log(result);
 console.log(concatenacao);
 
+//Tipo Tupla
+const dadosCliente: readonly [number, string] = [1, "Jose"];
+const dadosClientes2: [number, string, string] = [1, 'luiz', 'vieira'];
+const dadosClientes3: [number, string, string?] = [1, 'luiz'];
+const dadosClientes4: [number, string, ...string[]] = [1, 'luiz'];
+
+dadosCliente[0] = 100;
+dadosCliente[1] = 'Carlos';
+
+console.log(dadosCliente);
+console.log(dadosClientes2);
