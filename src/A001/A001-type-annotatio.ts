@@ -28,7 +28,7 @@ function soma(x: number, y: number) {
 const soma2: (x: number, y: number) => number = (x, y) => x + y;
 console.log(soma2(10, 15));
 
-// tipo any
+// tipo any -- utiliza em ultimo caso...
 function showmsg(msg: any) {
   return msg;
 }
@@ -36,3 +36,10 @@ function showmsg(msg: any) {
 console.log(showmsg([1, 2, 3]));
 console.log(showmsg('Olá'));
 console.log(showmsg(1));
+
+//tipo void
+function semretorno(...args: string[]): void {
+  console.log(args.join(' '));
+}
+
+semretorno('Gabriel', 'Algo');
