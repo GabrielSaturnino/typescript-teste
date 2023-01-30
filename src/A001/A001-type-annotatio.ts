@@ -130,3 +130,36 @@ num = 20;
 const y2 = 800
 
 if (typeof num === 'number') console.log(num + y2);
+
+function chooseColor(color: 'Vermelho' | 'AZUL' | 'AMARELO'): string {
+  return color;
+}
+
+console.log(chooseColor('AZUL'));
+let nome2 = 'James' as const;
+console.log(typeof nome2);
+
+// type alias
+type Idade = number; // criando meu tipo de variavel
+type Pessoa = {
+  nome: string,
+  idade: Idade,
+  salario: number,
+  corPreferida?: string,
+};
+
+type CorRGB = 'VERMELHO' | 'VERDE' | 'AZUL';
+type CorCMYK = 'CIANO' | 'MAGENTA' | 'AMARELO' | 'PRETO';
+type CorPreferida = CorRGB | CorCMYK;
+
+const pessoa2: Pessoa = {
+  nome: 'Luiz',
+  idade: 30,
+  salario: 200_000,
+};
+
+function setCorPreferida(pessoa: Pessoa, cor: CorPreferida): Pessoa {
+  return { ...pessoa, corPreferida: cor };
+
+};
+console.log(setCorPreferida(pessoa2, 'MAGENTA'));
