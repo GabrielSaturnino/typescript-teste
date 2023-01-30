@@ -55,6 +55,21 @@ const objetoA: {
   chaveB: 'valorB',
 };
 
-objetoA.chaveA = "chave alterada!";
+//objetoA.chaveA = "chave alterada!";
 objetoA.chaveC = "chave";
 objetoA.chaveD = 'Nova chave!';
+
+//Arrays <T> - T[]
+function multiplicaArgs(...args: number[]): number {
+  return args.reduce((ac, valor) => ac * valor, 1);
+}
+
+function concatenaString(...args: Array<string>): string {
+  return args.reduce((ac, valor) => ac + valor).toLowerCase();
+}
+
+const result = multiplicaArgs(1, 2, 3);
+const concatenacao = concatenaString('A', 'B', 'C');
+console.log(result);
+console.log(concatenacao);
+
