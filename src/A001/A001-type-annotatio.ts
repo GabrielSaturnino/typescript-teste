@@ -109,3 +109,24 @@ const squareoftwo = squareOf(2);
 function criaErro(): never {
   throw new Error("Error");
 }
+
+// Enum
+enum Cores {
+  VERMELHO = 100,
+  AZUL = 'AZUL',
+  AMARELO = 200,
+  ROXO,
+};
+
+console.log(Cores);
+
+// Unknow
+let num: unknown; //Joga um erro se fizer operações sem checar o tipo!
+
+num = 10;
+num = 500;
+num = 'Gab';
+num = 20;
+const y2 = 800
+
+if (typeof num === 'number') console.log(num + y2);
