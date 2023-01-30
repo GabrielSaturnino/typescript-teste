@@ -84,3 +84,28 @@ dadosCliente[1] = 'Carlos';
 
 console.log(dadosCliente);
 console.log(dadosClientes2);
+
+// Brincadeira
+function creatPerson(firstName: string, lastName?: string): {
+  firstName: string,
+  lastName?: string,
+} {
+  return {
+    firstName,
+    lastName,
+  };
+}
+
+const person = creatPerson("Gabriel", "Saturnino");
+console.log(person);
+
+function squareOf(x: any) {
+  if (typeof x === 'number') return x * x;
+  return null;
+}
+
+const squareoftwo = squareOf(2);
+
+function criaErro(): never {
+  throw new Error("Error");
+}
